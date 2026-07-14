@@ -1,4 +1,4 @@
-import { Home, MoreHorizontal, Settings, Users } from "lucide-react"
+import { MoreHorizontal } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -13,30 +13,8 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/components/ui/sidebar"
-
-const menuItems = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Users",
-    url: "#",
-    icon: Users,
-    items: [
-      { title: "Team", url: "#" },
-      { title: "Invited", url: "#" },
-      { title: "Billing", url: "#" },
-    ],
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-]
+} from "@/components/ui/sidebar";
+import { menuItems } from "@/components/menu-items";
 
 export function AppSidebar() {
   return (
@@ -52,16 +30,13 @@ export function AppSidebar() {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton tooltip={item.title}>
-                    <item.icon />
                     <span>{item.title}</span>
                   </SidebarMenuButton>
                   {item.items && item.items.length > 0 && (
                     <SidebarMenuSub>
                       {item.items.map((subItem) => (
                         <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton>
-                            {subItem.title}
-                          </SidebarMenuSubButton>
+                          <SidebarMenuSubButton>{subItem.title}</SidebarMenuSubButton>
                         </SidebarMenuSubItem>
                       ))}
                     </SidebarMenuSub>
@@ -83,5 +58,5 @@ export function AppSidebar() {
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
