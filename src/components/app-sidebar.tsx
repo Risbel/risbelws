@@ -1,4 +1,5 @@
 import { MoreHorizontal } from "lucide-react";
+import { Link } from "react-router";
 import {
   Sidebar,
   SidebarContent,
@@ -10,9 +11,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 import { menuItems } from "@/components/menu-items";
 
@@ -20,7 +18,7 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="font-semibold">My App</div>
+        <div className="font-semibold">My Portfolio</div>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
@@ -30,17 +28,10 @@ export function AppSidebar() {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton tooltip={item.title}>
-                    <span>{item.title}</span>
+                    <Link to={item.url}>
+                      <span>{item.title}</span>
+                    </Link>
                   </SidebarMenuButton>
-                  {item.items && item.items.length > 0 && (
-                    <SidebarMenuSub>
-                      {item.items.map((subItem) => (
-                        <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton>{subItem.title}</SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      ))}
-                    </SidebarMenuSub>
-                  )}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>

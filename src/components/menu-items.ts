@@ -1,19 +1,30 @@
 export const menuItems = [
   {
-    title: "Home",
-    url: "#",
+    title: "Introduction",
+    url: "/",
   },
   {
-    title: "Users",
-    url: "#",
-    items: [
-      { title: "Team", url: "#" },
-      { title: "Invited", url: "#" },
-      { title: "Billing", url: "#" },
-    ],
+    title: "About Me",
+    url: "/about",
   },
   {
-    title: "Settings",
-    url: "#",
+    title: "Projects",
+    url: "/projects",
+  },
+  {
+    title: "Skills & Tools",
+    url: "/skills-tools",
+  },
+  {
+    title: "Experience",
+    url: "/experience",
+  },
+  {
+    title: "Education",
+    url: "/education",
+  },
+  {
+    title: "Contact",
+    url: "/contact",
   },
 ];
