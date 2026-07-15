@@ -1,9 +1,0 @@
-<svg width="360" height="350" viewBox="0 0 360 350" xmlns="http://www.w3.org/2000/svg">
-  <defs><filter id="sm-fx-merged" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="24" result="smBlur" /><feOffset in="smBlur" dx="0" dy="15" result="smOff" /><feFlood flood-color="#000000" flood-opacity="0.5" result="smShadowColor" /><feComposite in="smShadowColor" in2="smOff" operator="in" result="smShadow" /><feMorphology in="SourceAlpha" operator="dilate" radius="14" result="smDilated" /><feFlood flood-color="#000000" result="smStrokeColor" /><feComposite in="smStrokeColor" in2="smDilated" operator="in" result="smOutline" /><feMerge><feMergeNode in="smShadow" /><feMergeNode in="smOutline" /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs>
-  <g fill="#ffffff" fill-opacity="0.96" filter="url(#sm-fx-merged)">
-      <path d="M 166 65 L 274 65 A 21 21 0 0 1 295 86 L 295 184 A 21 21 0 0 1 274 205 L 166 205 A 21 21 0 0 1 145 184 L 145 86 A 21 21 0 0 1 166 65 Z" />
-      <path d="M 126 105 L 234 105 A 21 21 0 0 1 255 126 L 255 224 A 21 21 0 0 1 234 245 L 126 245 A 21 21 0 0 1 105 224 L 105 126 A 21 21 0 0 1 126 105 Z" />
-      <path d="M 86 145 L 194 145 A 21 21 0 0 1 215 166 L 215 264 A 21 21 0 0 1 194 285 L 86 285 A 21 21 0 0 1 65 264 L 65 166 A 21 21 0 0 1 86 145 Z" />
-      
-  </g>
-</svg>

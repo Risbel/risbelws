@@ -18,7 +18,10 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="font-semibold">My Portfolio</div>
+        <div className="flex items-center gap-2">
+          <img height={28} width={28} src="/favicon.svg"></img>
+          <p className="font-semibold">RisbelWS</p>
+        </div>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

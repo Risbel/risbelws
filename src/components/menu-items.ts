@@ -1,6 +1,6 @@
 export const menuItems = [
   {
-    title: "Introduction",
+    title: "Home",
     url: "/",
   },
   {
