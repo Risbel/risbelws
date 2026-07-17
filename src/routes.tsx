@@ -1,11 +1,12 @@
 import App from "@/App";
-import { Introduction } from "@/pages/Introduction";
+
 import { About } from "@/pages/About";
 import { Projects } from "@/pages/Projects";
 import { SkillsTools } from "@/pages/SkillsTools";
 import { Experience } from "@/pages/Experience";
 import { Education } from "@/pages/Education";
 import { Contact } from "@/pages/Contact";
+import { Home } from "./pages/Home";
 
 export const routes = [
   {
@@ -14,7 +15,7 @@ export const routes = [
     children: [
       {
         path: "/",
-        element: <Introduction />,
+        element: <Home />,
       },
       {
         path: "/about",

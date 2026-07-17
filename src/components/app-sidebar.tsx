@@ -18,7 +18,7 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 py-3">
           <img height={28} width={28} src="/favicon.svg"></img>
           <p className="font-semibold">RisbelWS</p>
         </div>
@@ -31,8 +31,8 @@ export function AppSidebar() {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton tooltip={item.title}>
-                    <Link to={item.url}>
-                      <span>{item.title}</span>
+                    <Link className="group-hover/menu-item:translate-x-2 transition-transform w-full" to={item.url}>
+                      {item.title}
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
