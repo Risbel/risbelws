@@ -3,6 +3,7 @@ import { Layers, Palette, Puzzle, Sparkles, Zap, type LucideIcon } from "lucide-
 import { LogoListSection } from "@/components/logo-list-section";
 import { Layout } from "@/components/layout";
 import type { LogoItem } from "@/components/logo-tag";
+import { Spotlight } from "@/components/spotlight";
 
 type Highlight = {
   icon: LucideIcon;
@@ -37,7 +38,7 @@ const highlights: Highlight[] = [
     icon: Zap,
     title: "Efficient workflow",
     description:
-      "I invest in professional tools like paid Cursor AI to speed up development, reduce errors, and maintain high code quality.",
+      "I invest in professional tools like Claude Code to speed up development, reduce errors, and maintain high code quality.",
   },
 ];
 
@@ -120,16 +121,20 @@ export function SkillsTools() {
   const shouldReduceMotion = useReducedMotion();
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 },
+      transition: { type: "spring", stiffness: 200, damping: 30 },
     },
   };
 
+  const viewport = { once: true, amount: 0.2, margin: "0px 0px -80px 0px" };
+
   return (
-    <Layout>
+    <Layout className="relative overflow-hidden">
+      <Spotlight delay={0.5} />
+
       <h1 className="text-3xl font-bold">Skills & Tools</h1>
 
       <motion.div
@@ -137,7 +142,7 @@ export function SkillsTools() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={viewport}
       >
         {highlights.map(({ icon: Icon, title, description }) => (
           <motion.div
@@ -152,41 +157,21 @@ export function SkillsTools() {
         ))}
       </motion.div>
 
-      <div className="space-y-8 mt-10">
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+      <div className="space-y-8 mt-10 mb-16">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={viewport}>
           <LogoListSection title="Languages" subtitle="Core languages I write day to day" logos={languages} />
         </motion.div>
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={viewport}>
           <LogoListSection
             title="Frameworks & Libraries"
             subtitle="Building blocks for the apps I ship"
             logos={frameworks}
           />
         </motion.div>
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={viewport}>
           <LogoListSection title="Backend & Database" subtitle="Server-side runtime and data storage" logos={backend} />
         </motion.div>
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={viewport}>
           <LogoListSection
             title="Tools & Platforms"
             subtitle="What keeps the workflow running smoothly"

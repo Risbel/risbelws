@@ -5,6 +5,7 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { Layout } from "@/components/layout";
+import { Spotlight } from "@/components/spotlight";
 
 const heading = [{ text: "Hi," }, { text: "I'm" }, { text: "Risbel", className: "text-primary" }];
 
@@ -30,19 +31,13 @@ export function About() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 },
+      transition: { type: "spring", stiffness: 100, damping: 24 },
     },
   };
 
   return (
     <Layout className="relative overflow-hidden">
-      <div
-        className={cn(
-          "pointer-events-none absolute -z-10 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none",
-          "h-175 w-175 rounded-full",
-          "bg-[radial-gradient(circle,rgba(255,255,255,0.15)_0%,rgba(255,255,255,0.06)_35%,transparent_70%)]",
-        )}
-      />
+      <Spotlight />
 
       <TypewriterEffect words={heading} className="text-left mb-2 md:mb-6" />
 
@@ -72,11 +67,15 @@ export function About() {
         ))}
       </motion.div>
 
-      <motion.div className="mt-8" variants={itemVariants}>
-        <a href={import.meta.env.VITE_RESUME_URL} className={cn(buttonVariants({ variant: "default", size: "xl" }))}>
-          Download Resume <DownloadIcon />
-        </a>
-      </motion.div>
+      <motion.a
+        href={import.meta.env.VITE_RESUME_URL}
+        className={cn(buttonVariants({ variant: "default", size: "xl" }), "transition-colors")}
+        variants={itemVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        Download Resume <DownloadIcon />
+      </motion.a>
     </Layout>
   );
 }
