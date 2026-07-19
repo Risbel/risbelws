@@ -4,6 +4,7 @@ import { DownloadIcon } from "lucide-react";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button-variants";
+import { Layout } from "@/components/layout";
 
 const heading = [{ text: "Hi," }, { text: "I'm" }, { text: "Risbel", className: "text-primary" }];
 
@@ -34,7 +35,7 @@ export function About() {
   };
 
   return (
-    <div className="relative min-h-full overflow-hidden p-6">
+    <Layout className="relative overflow-hidden">
       <div
         className={cn(
           "pointer-events-none absolute -z-10 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none",
@@ -46,7 +47,7 @@ export function About() {
       <TypewriterEffect words={heading} className="text-left mb-2 md:mb-6" />
 
       <motion.div
-        className="space-y-4 text-muted-foreground"
+        className="hidden md:block space-y-4 text-muted-foreground"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -56,12 +57,26 @@ export function About() {
             {text}
           </motion.p>
         ))}
-        <motion.div className="mt-8" variants={itemVariants}>
-          <a href={import.meta.env.VITE_RESUME_URL} className={cn(buttonVariants({ variant: "default", size: "xl" }))}>
-            Download Resume <DownloadIcon />
-          </a>
-        </motion.div>
       </motion.div>
-    </div>
+
+      <motion.div
+        className="md:hidden space-y-4 text-muted-foreground"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {paragraphs.slice(0, 2).map((text) => (
+          <motion.p className=" md:text-md lg:text-lg" key={text} variants={itemVariants}>
+            {text}
+          </motion.p>
+        ))}
+      </motion.div>
+
+      <motion.div className="mt-8" variants={itemVariants}>
+        <a href={import.meta.env.VITE_RESUME_URL} className={cn(buttonVariants({ variant: "default", size: "xl" }))}>
+          Download Resume <DownloadIcon />
+        </a>
+      </motion.div>
+    </Layout>
   );
 }

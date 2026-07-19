@@ -20,7 +20,7 @@ const App = () => {
             )}
           />
 
-          <div className="flex items-center justify-between md:justify-end border-b p-4 backdrop-blur-xs">
+          <div className="sticky top-0 z-10 flex items-center justify-between md:justify-end border-b p-4 backdrop-blur-xs bg-background/80">
             <SidebarTrigger className="cursor-pointer md:hidden" />
 
             <ModeToggle />
