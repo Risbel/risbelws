@@ -2,6 +2,7 @@ import App from "@/App";
 
 import { About } from "@/pages/About";
 import { Projects } from "@/pages/Projects";
+import { ProjectDetail } from "@/pages/ProjectDetail";
 import { SkillsTools } from "@/pages/SkillsTools";
 import { Experience } from "@/pages/Experience";
 import { Education } from "@/pages/Education";
@@ -24,6 +25,10 @@ export const routes = [
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/projects/:slug",
+        element: <ProjectDetail />,
       },
       {
         path: "/skills-tools",
