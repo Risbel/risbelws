@@ -2,11 +2,18 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
+import { useEffect } from "react";
 import { PageNav } from "./components/page-nav";
 import { cn } from "@/lib/utils";
 
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <SidebarProvider>

@@ -43,6 +43,22 @@ function Role({ title, org, location }: { title: string; org: string; location?:
 
 const experience: TimelineEntry[] = [
   {
+    title: "Alianci Cleaning",
+    content: (
+      <div>
+        <Role title="Fullstack Developer" org="Freelance" />
+        <div className="grid gap-4 lg:grid-cols-2">
+          <ProjectCard
+            name="Alianci Cleaning"
+            url="https://aliancicleaning.com"
+            description="Booking platform for professional cleaning services with a landing page, customer booking system and admin dashboard."
+            stack="React 19, TypeScript, Vite, Tailwind CSS 4, shadcn/ui, Supabase, TanStack Query"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
     title: "10/2025 — Present",
     content: (
       <div>

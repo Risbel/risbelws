@@ -12,9 +12,12 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { useSidebar } from "@/components/ui/use-sidebar";
 import { menuItems } from "@/components/menu-items";
 
 export function AppSidebar() {
+  const { setOpenMobile } = useSidebar();
+
   return (
     <Sidebar>
       <SidebarHeader>
@@ -31,7 +34,11 @@ export function AppSidebar() {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton tooltip={item.title}>
-                    <Link className="group-hover/menu-item:translate-x-2 transition-transform w-full" to={item.url}>
+                    <Link
+                      className="group-hover/menu-item:translate-x-2 transition-transform w-full"
+                      to={item.url}
+                      onClick={() => setOpenMobile(false)}
+                    >
                       {item.title}
                     </Link>
                   </SidebarMenuButton>
