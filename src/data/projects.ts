@@ -186,6 +186,255 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "noryx-studio",
+    name: "Noryx Studio",
+    githubUrl: "https://github.com/m1r4g3-code/noryx-studio",
+    liveUrl: "https://noryx-studio.vercel.app",
+    description:
+      "Full-stack booking platform for a premium barbershop, with race-safe scheduling, an admin console and email/SMS notifications.",
+    longDescription:
+      "Noryx Studio is a two-sided web application for a premium barbershop in Lagos: a public marketing and booking site with a custom dark and gold design system, and a private admin console that runs the business behind it. Its data layer is built security-first, with Postgres Row-Level Security, a database-level lock against double-booking, rate-limited public writes and tag-based ISR so the public site stays static and fast.",
+    stack: [
+      "Next.js 14",
+      "React 18",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Zod",
+      "Twilio",
+    ],
+    image: "/noryx-studio-00.webp",
+    images: ["/noryx-studio-00.webp", "/noryx-studio-01.webp"],
+    features: [
+      {
+        title: "Booking Flow",
+        description:
+          "Four-step wizard to pick a service, date and time, enter client details and confirm, with live slot availability.",
+      },
+      {
+        title: "Race-Safe Scheduling",
+        description:
+          "A partial unique index blocks double-booking at the database level, and the server returns a clean \"slot just got taken\" response.",
+      },
+      {
+        title: "Admin Console",
+        description:
+          "Auth-gated dashboard to manage appointments, services, review moderation, gallery uploads and site settings.",
+      },
+      {
+        title: "Security-First Data Layer",
+        description:
+          "Row-Level Security on every table, availability exposed through an RPC that never leaks client data, and database-backed rate limiting.",
+      },
+      {
+        title: "Notifications",
+        description:
+          "Email via Gmail SMTP and SMS via Twilio when a booking is made and when it is confirmed, cancelled or completed.",
+      },
+      {
+        title: "Gallery & Reviews",
+        description:
+          "Public gallery with lightbox and client-side WebP compression on upload, plus client reviews with star ratings.",
+      },
+    ],
+    stackGroups: [
+      {
+        category: "Frontend",
+        items: [
+          "Next.js 14 (App Router)",
+          "React 18",
+          "TypeScript",
+          "Tailwind CSS 3",
+        ],
+      },
+      {
+        category: "Forms & Validation",
+        items: ["React Hook Form", "Zod", "React Day Picker", "date-fns"],
+      },
+      {
+        category: "Backend & Database",
+        items: [
+          "Server Actions",
+          "Supabase",
+          "PostgreSQL",
+          "Row-Level Security",
+          "Supabase Auth",
+        ],
+      },
+      {
+        category: "Notifications",
+        items: ["Nodemailer (Gmail SMTP)", "Twilio SMS"],
+      },
+      {
+        category: "Testing, CI & Deployment",
+        items: ["Vitest", "GitHub Actions", "Vercel"],
+      },
+    ],
+    techMatrix: [
+      {
+        layer: "Framework",
+        technology: "Next.js 14 + React 18",
+        purpose: "App Router with server components and server actions",
+      },
+      {
+        layer: "Language",
+        technology: "TypeScript",
+        purpose: "Strict typing across the app",
+      },
+      {
+        layer: "Styling",
+        technology: "Tailwind CSS",
+        purpose: "Custom dark and gold design system",
+      },
+      {
+        layer: "Backend & Database",
+        technology: "Supabase + PostgreSQL",
+        purpose: "Data, auth and storage protected by Row-Level Security",
+      },
+      {
+        layer: "Validation",
+        technology: "Zod + React Hook Form",
+        purpose: "Schemas shared between client forms and server actions",
+      },
+      {
+        layer: "Caching",
+        technology: "Next.js ISR + cache tags",
+        purpose: "Static public pages revalidated when an admin makes changes",
+      },
+      {
+        layer: "Email",
+        technology: "Nodemailer (Gmail SMTP)",
+        purpose: "Booking and status notification emails",
+      },
+      {
+        layer: "SMS",
+        technology: "Twilio",
+        purpose: "Booking and status text messages",
+      },
+      {
+        layer: "Testing & CI",
+        technology: "Vitest + GitHub Actions",
+        purpose: "Unit tests plus type-check, lint and build on every push",
+      },
+      {
+        layer: "Hosting",
+        technology: "Vercel",
+        purpose: "Production hosting with automatic deployments",
+      },
+    ],
+  },
+  {
+    slug: "fc-cleaning",
+    name: "FC Cleaning",
+    githubUrl: "https://github.com/Perchito/fc-cleaning-web",
+    liveUrl: "https://www.fccleaningcompany.com",
+    description:
+      "Marketing website for a UK commercial cleaning company, with animated sections, service pages and a quote request form.",
+    longDescription:
+      "FC Cleaning is a modern rebuild of the website for FC Cleaning Company Ltd, a commercial cleaning business serving kitchens, restaurants, bars and hospitality venues. It uses a premium navy and teal design system with physics-based animations, presents the company's services and process, and turns visitors into leads through an enquiry form and a floating WhatsApp button.",
+    stack: [
+      "React 19",
+      "Vite",
+      "Tailwind CSS 4",
+      "React Spring",
+      "React Router",
+    ],
+    image: "/fc-cleaning-00.webp",
+    images: [
+      "/fc-cleaning-00.webp",
+      "/fc-cleaning-01.webp",
+      "/fc-cleaning-02.webp",
+      "/fc-cleaning-03.webp",
+    ],
+    features: [
+      {
+        title: "Homepage",
+        description:
+          "Hero, trust marquee, animated stat counters, services overview, process steps and a call-to-action band.",
+      },
+      {
+        title: "Service Pages",
+        description:
+          "Detailed blocks for kitchen, restaurant and bar, hospitality deep cleaning and washroom services, each with its own CTA.",
+      },
+      {
+        title: "Enquiry Form",
+        description:
+          "Contact form that delivers quote requests by email through Formspree, with a thank-you confirmation page.",
+      },
+      {
+        title: "FAQ & Content Pages",
+        description:
+          "Categorised FAQ accordion with filter tabs, plus About Us, Privacy and Terms pages.",
+      },
+      {
+        title: "WhatsApp Contact",
+        description:
+          "Floating WhatsApp button that opens a chat with a prefilled quote request.",
+      },
+      {
+        title: "Performance & SEO",
+        description:
+          "Tuned spring animations, lightweight gradient glows, compressed WebP images, Open Graph tags, sitemap and robots.txt.",
+      },
+    ],
+    stackGroups: [
+      {
+        category: "Frontend",
+        items: ["React 19", "Vite", "JavaScript", "Tailwind CSS 4"],
+      },
+      {
+        category: "Animation & Routing",
+        items: ["React Spring", "React Router v7"],
+      },
+      {
+        category: "Forms & Contact",
+        items: ["Formspree", "WhatsApp click-to-chat"],
+      },
+      {
+        category: "Deployment",
+        items: ["Vercel"],
+      },
+    ],
+    techMatrix: [
+      {
+        layer: "Bundler",
+        technology: "Vite",
+        purpose: "Fast dev server and optimized production builds",
+      },
+      {
+        layer: "Framework",
+        technology: "React 19",
+        purpose: "Component-based pages and sections",
+      },
+      {
+        layer: "Styling",
+        technology: "Tailwind CSS 4",
+        purpose: "Utility-first CSS with custom navy and teal tokens",
+      },
+      {
+        layer: "Animation",
+        technology: "React Spring",
+        purpose: "Scroll reveals, stat counters, hover springs and accordion",
+      },
+      {
+        layer: "Routing",
+        technology: "React Router v7",
+        purpose: "Client-side navigation between pages",
+      },
+      {
+        layer: "Forms",
+        technology: "Formspree",
+        purpose: "Emails enquiries from the contact form to the business",
+      },
+      {
+        layer: "Hosting",
+        technology: "Vercel",
+        purpose: "Production hosting with automatic deployments",
+      },
+    ],
+  },
+  {
     slug: "storm-roofing",
     name: "Storm Roofing",
     githubUrl: "https://github.com/Risbel/storm_roofing",
@@ -278,172 +527,6 @@ export const projects: Project[] = [
         layer: "Email",
         technology: "Nodemailer",
         purpose: "Sends service requests to the business by email",
-      },
-      {
-        layer: "Hosting",
-        technology: "Vercel",
-        purpose: "Production hosting with automatic deployments",
-      },
-    ],
-  },
-  {
-    slug: "risbeui-market",
-    name: "RisbeUI",
-    githubUrl: "https://github.com/Risbel/RisbeUI-market",
-    liveUrl: "https://risbeui-market.vercel.app",
-    description:
-      "Marketplace where developers buy and sell ready-to-use UI components, with Stripe payments and seller payouts.",
-    longDescription:
-      "RisbeUI Market is a full-stack marketplace for UI components and code snippets. Sellers upload their code, images and a rich-text guide, buyers browse by category and tags, preview the component and purchase it through Stripe, and sellers get paid directly via Stripe Connect.",
-    stack: [
-      "Next.js 14",
-      "React 18",
-      "TypeScript",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Prisma",
-      "PostgreSQL",
-      "Stripe",
-      "Kinde",
-    ],
-    image: "/risbeui-00.webp",
-    images: [
-      "/risbeui-00.webp",
-      "/risbeui-01.webp",
-      "/risbeui-02.webp",
-      "/risbeui-03.webp",
-    ],
-    features: [
-      {
-        title: "Component Marketplace",
-        description:
-          "Browse products by category and tags, with product cards, skeleton loaders and dedicated category pages.",
-      },
-      {
-        title: "Seller Flow",
-        description:
-          "Sellers upload source code, images, a rich-text description and an installation guide using a Tiptap editor and drag-and-drop uploads.",
-      },
-      {
-        title: "Payments & Payouts",
-        description:
-          "Stripe Checkout for purchases and Stripe Connect so sellers receive their earnings directly, with email confirmations after each sale.",
-      },
-      {
-        title: "Product Page",
-        description:
-          "Live code preview, syntax-highlighted source code, usage guide and JSON export for every component.",
-      },
-      {
-        title: "Accounts & Dashboard",
-        description:
-          "Kinde authentication, a My Products area with soft-delete, account settings and billing management.",
-      },
-    ],
-    stackGroups: [
-      {
-        category: "Frontend",
-        items: [
-          "Next.js 14 (App Router)",
-          "React 18",
-          "TypeScript",
-          "Tailwind CSS",
-          "shadcn/ui",
-        ],
-      },
-      {
-        category: "UI & Content",
-        items: [
-          "Radix UI",
-          "Framer Motion",
-          "Embla Carousel",
-          "Lucide",
-          "Tiptap",
-          "Prism.js",
-          "highlight.js",
-        ],
-      },
-      {
-        category: "Backend & Database",
-        items: [
-          "Next.js Route Handlers",
-          "Server Actions",
-          "Prisma",
-          "PostgreSQL",
-          "Zod",
-        ],
-      },
-      {
-        category: "Payments, Auth & Services",
-        items: [
-          "Stripe Checkout",
-          "Stripe Connect",
-          "Kinde",
-          "UploadThing",
-          "Resend",
-          "React Email",
-        ],
-      },
-      {
-        category: "Deployment",
-        items: ["Vercel"],
-      },
-    ],
-    techMatrix: [
-      {
-        layer: "Framework",
-        technology: "Next.js 14 + React 18",
-        purpose: "Server-rendered App Router pages with server actions",
-      },
-      {
-        layer: "Language",
-        technology: "TypeScript",
-        purpose: "End-to-end type safety",
-      },
-      {
-        layer: "Styling",
-        technology: "Tailwind CSS + shadcn/ui",
-        purpose: "Utility-first styling with accessible Radix-based components",
-      },
-      {
-        layer: "Animation",
-        technology: "Framer Motion",
-        purpose: "Smooth transitions and interactive UI",
-      },
-      {
-        layer: "Rich Text",
-        technology: "Tiptap",
-        purpose: "Editor for product descriptions and guides",
-      },
-      {
-        layer: "Database & ORM",
-        technology: "PostgreSQL + Prisma",
-        purpose: "Users, products, tags and purchases with migrations",
-      },
-      {
-        layer: "Authentication",
-        technology: "Kinde",
-        purpose: "Sign-in, sessions and user management",
-      },
-      {
-        layer: "Payments",
-        technology: "Stripe Checkout + Connect",
-        purpose: "Buyer checkout and direct seller payouts",
-      },
-      {
-        layer: "File Uploads",
-        technology: "UploadThing",
-        purpose: "Product image and code file uploads",
-      },
-      {
-        layer: "Email",
-        technology: "Resend + React Email",
-        purpose: "Purchase confirmation emails",
-      },
-      {
-        layer: "Validation",
-        technology: "Zod",
-        purpose: "Schema validation for forms and server actions",
       },
       {
         layer: "Hosting",
@@ -570,55 +653,382 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "qvaevents",
-    name: "QvaEvents",
-    githubUrl: "https://github.com/Risbel/qvaevents",
-    liveUrl: "https://qvaevents.vercel.app",
+    slug: "kynda-coffee",
+    name: "Kynda Coffee",
+    githubUrl: "https://github.com/Jpalmer95/kynda-coffee",
+    liveUrl: "https://www.kyndacoffee.com",
     description:
-      "Multi-tenant B2B2C events platform where organizers manage businesses and events, and clients discover events and reserve their spot.",
+      "All-in-one digital platform for a specialty coffee shop: online store, menu ordering, AI merch design studio, loyalty and a full admin back office.",
     longDescription:
-      "QvaEvents is a bilingual (English/Spanish) B2B2C platform. Organizers create a profile and one or more businesses, each with its own public landing page, and publish events through a step-by-step wizard. Clients browse events, reserve visits with companions, and keep track of their tickets, while businesses manage visitors, clients, staff and role-based permissions from a dedicated dashboard.",
+      "Kynda Coffee is the digital platform for an organic specialty coffee shop in Horseshoe Bay, Texas. Customers shop coffee beans and merch, browse the café menu, order by QR code, earn loyalty rewards and design custom merch with AI, while the team runs the business from staff and admin areas with a kitchen display, POS sync, inventory, training and an AI-assisted marketing pipeline. It is an installable PWA with light and dark themes.",
     stack: [
-      "Next.js 15",
+      "Next.js 16",
       "React 19",
       "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Stripe",
+      "Square",
+      "Zustand",
+    ],
+    image: "/kynda-coffee-00.webp",
+    images: [
+      "/kynda-coffee-00.webp",
+      "/kynda-coffee-01.webp",
+      "/kynda-coffee-02.webp",
+    ],
+    features: [
+      {
+        title: "Online Store",
+        description:
+          "Coffee, tea, brew gear, apparel and gifts with category filters, cart, Stripe checkout, subscriptions and gift cards.",
+      },
+      {
+        title: "Menu & QR Ordering",
+        description:
+          "Searchable café menu synced from Square, with QR-code ordering, a self-service kiosk and delivery via DoorDash and Uber Eats.",
+      },
+      {
+        title: "AI Design Studio",
+        description:
+          "Canvas editor where customers generate and customize merch designs with AI, fulfilled as print-on-demand through Printful.",
+      },
+      {
+        title: "Accounts & Loyalty",
+        description:
+          "Customer accounts with order history, addresses, favorites, subscriptions, rewards tiers and referrals.",
+      },
+      {
+        title: "Staff & Admin Back Office",
+        description:
+          "Kitchen display system, orders, catalog, inventory counts and waste logs, customers, analytics, staff checklists, schedules and training.",
+      },
+      {
+        title: "Marketing Automation",
+        description:
+          "AI-assisted pipeline that turns media into social posts with an approval gate, plus email newsletters and SMS campaigns.",
+      },
+    ],
+    stackGroups: [
+      {
+        category: "Frontend",
+        items: [
+          "Next.js 16 (App Router)",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS",
+          "Lucide",
+        ],
+      },
+      {
+        category: "State & Validation",
+        items: ["Zustand", "Zod"],
+      },
+      {
+        category: "Backend & Database",
+        items: [
+          "Next.js Route Handlers",
+          "Supabase",
+          "PostgreSQL",
+          "Supabase Auth",
+          "Supabase Storage",
+        ],
+      },
+      {
+        category: "Payments & Commerce",
+        items: ["Stripe", "Square POS", "Printful"],
+      },
+      {
+        category: "AI & Design",
+        items: ["Anthropic Claude", "FAL.ai (FLUX)", "Konva / React Konva"],
+      },
+      {
+        category: "Messaging",
+        items: ["Resend", "Twilio", "Web Push"],
+      },
+      {
+        category: "Monitoring & Analytics",
+        items: ["Sentry", "PostHog"],
+      },
+      {
+        category: "Testing, CI & Deployment",
+        items: [
+          "Vitest",
+          "Testing Library",
+          "Playwright",
+          "GitHub Actions",
+          "Docker",
+          "PM2",
+        ],
+      },
+    ],
+    techMatrix: [
+      {
+        layer: "Framework",
+        technology: "Next.js 16 + React 19",
+        purpose: "App Router pages and API routes for store, staff and admin",
+      },
+      {
+        layer: "Language",
+        technology: "TypeScript",
+        purpose: "Type safety across the whole platform",
+      },
+      {
+        layer: "Styling",
+        technology: "Tailwind CSS",
+        purpose: "Design-token system with light and dark themes",
+      },
+      {
+        layer: "Backend & Database",
+        technology: "Supabase + PostgreSQL",
+        purpose: "Data, authentication and file storage",
+      },
+      {
+        layer: "Client State",
+        technology: "Zustand",
+        purpose: "Shopping cart and UI state",
+      },
+      {
+        layer: "Payments",
+        technology: "Stripe",
+        purpose: "Online checkout, subscriptions and gift cards",
+      },
+      {
+        layer: "Point of Sale",
+        technology: "Square",
+        purpose: "In-store POS, menu catalog and order sync",
+      },
+      {
+        layer: "Print on Demand",
+        technology: "Printful",
+        purpose: "Fulfillment of custom merch designs",
+      },
+      {
+        layer: "AI",
+        technology: "Claude + FAL.ai",
+        purpose: "Marketing content generation and AI image designs",
+      },
+      {
+        layer: "Design Canvas",
+        technology: "Konva",
+        purpose: "Interactive editor for the design studio",
+      },
+      {
+        layer: "Email & SMS",
+        technology: "Resend + Twilio",
+        purpose: "Order notifications, newsletters and SMS campaigns",
+      },
+      {
+        layer: "Monitoring",
+        technology: "Sentry + PostHog",
+        purpose: "Error tracking and product analytics",
+      },
+      {
+        layer: "Testing & CI",
+        technology: "Vitest + Playwright + GitHub Actions",
+        purpose: "Unit and end-to-end tests with type-check, lint and build",
+      },
+      {
+        layer: "Hosting",
+        technology: "Docker + PM2",
+        purpose: "Self-hosted Node.js production server",
+      },
+    ],
+  },
+  {
+    slug: "poppy-chargha-house",
+    name: "Poppy Chargha House",
+    liveUrl: "https://poppy-chargha-restaurant-website.vercel.app/",
+    description:
+      "Full-stack restaurant website for Poppy Chargha House with an online menu, gallery, reviews and reservations, plus a secure admin dashboard.",
+    longDescription:
+      "Poppy Chargha House is a modern restaurant website for Poppy Chargha House in Mughalpura, Lahore. Customers explore the menu by category, browse the gallery, read reviews and make reservations, while a secure admin dashboard lets staff manage restaurant content, images and analytics, backed by Supabase for authentication, database and storage.",
+    stack: [
+      "React 19",
+      "Vite",
       "Tailwind CSS 4",
       "shadcn/ui",
       "Supabase",
       "TanStack Query",
-      "next-intl",
+      "React Hook Form",
+      "Zod",
     ],
-    image: "/qvaevents-00.webp",
+    image: "/poppy-chargha-house-00.webp",
+    images: [
+      "/poppy-chargha-house-00.webp",
+      "/poppy-chargha-house-01.webp",
+      "/poppy-chargha-house-02.webp",
+    ],
     features: [
       {
-        title: "Organizer Onboarding",
+        title: "Restaurant Website",
         description:
-          "Organizers sign up, create a profile and then one or more businesses, each with its own logo, banner images, footer and map location.",
+          "Responsive landing page with hero, food menu by category, gallery, reviews and contact and social links.",
       },
       {
-        title: "Event Creation Wizard",
+        title: "Online Reservations",
         description:
-          "Multi-step flow for basic info, date and time, interactive map location, poster uploads, access type, visibility and publishing, with reusable saved configurations.",
+          "Reservation system for customers to book a table directly from the site.",
       },
       {
-        title: "Client Reservations",
+        title: "Admin Dashboard",
         description:
-          "Clients reserve visits with companions, confirm attendance through a code link, cancel, and view their tickets and profile.",
+          "Protected admin routes to manage menu, gallery and restaurant content, with dashboard analytics and charts.",
       },
       {
-        title: "Business Dashboard",
+        title: "Authentication",
         description:
-          "Manage events, visitors (mark as attended, email or message all), clients, reviews and staff, with search and filters.",
+          "Secure admin login with email/password and Google OAuth via Supabase Auth.",
       },
       {
-        title: "Roles & Permissions",
+        title: "Image Uploads",
         description:
-          "Custom roles with permissions per resource so business owners control what each staff member can do.",
+          "Menu and gallery images uploaded and served from Supabase Storage.",
+      },
+    ],
+    stackGroups: [
+      {
+        category: "Frontend",
+        items: ["React 19", "Vite", "JavaScript (JSX)", "React Router DOM"],
       },
       {
-        title: "Public Business Pages & i18n",
+        category: "UI & Styling",
+        items: [
+          "Tailwind CSS 4",
+          "shadcn/ui",
+          "Radix UI",
+          "Framer Motion",
+          "Lucide React",
+        ],
+      },
+      {
+        category: "Data Management & Forms",
+        items: ["TanStack Query", "React Hook Form", "Zod"],
+      },
+      {
+        category: "Visualization",
+        items: ["Recharts"],
+      },
+      {
+        category: "Backend & Database",
+        items: [
+          "Supabase",
+          "PostgreSQL",
+          "Row Level Security",
+          "Supabase Storage",
+        ],
+      },
+      {
+        category: "Development Tools",
+        items: ["ESLint", "Prettier"],
+      },
+    ],
+    techMatrix: [
+      {
+        layer: "Bundler",
+        technology: "Vite",
+        purpose: "Fast dev server and optimized production builds",
+      },
+      {
+        layer: "Framework",
+        technology: "React 19",
+        purpose: "Component-based public site and admin dashboard",
+      },
+      {
+        layer: "Styling",
+        technology: "Tailwind CSS 4 + shadcn/ui",
+        purpose: "Utility-first CSS with accessible UI primitives",
+      },
+      {
+        layer: "Animation",
+        technology: "Framer Motion",
+        purpose: "Smooth transitions across the public site",
+      },
+      {
+        layer: "Forms & Validation",
+        technology: "React Hook Form + Zod",
+        purpose: "Reservation and admin content forms with schema validation",
+      },
+      {
+        layer: "Server State",
+        technology: "TanStack Query",
+        purpose: "Data fetching and caching for menu, gallery and reviews",
+      },
+      {
+        layer: "Backend & Database",
+        technology: "Supabase + PostgreSQL",
+        purpose: "Auth, relational data and Row Level Security policies",
+      },
+      {
+        layer: "Storage",
+        technology: "Supabase Storage",
+        purpose: "Hosting menu and gallery images",
+      },
+      {
+        layer: "Visualization",
+        technology: "Recharts",
+        purpose: "Admin dashboard analytics and charts",
+      },
+      {
+        layer: "Hosting",
+        technology: "Vercel",
+        purpose: "Production hosting with automatic deployments",
+      },
+    ],
+  },
+  {
+    slug: "nakheel-restaurant-cafe",
+    name: "Nakheel Restaurant & Café",
+    liveUrl: "https://nakheel-restaurant-cafe.vercel.app/",
+    description:
+      "Multilingual restaurant and café website with a full menu, gallery, testimonials and table reservation system.",
+    longDescription:
+      "Nakheel Restaurant & Café is a modern, fully-featured restaurant website with Arabic (RTL) and English/French (LTR) support, seamless language switching and RTL/LTR layout transitions, and a comprehensive menu, gallery, testimonials and table reservation system, all wrapped in a polished light and dark UI.",
+    stack: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 3",
+      "Radix UI",
+      "Framer Motion",
+    ],
+    image: "/nakheel-restaurant-cafe-00.webp",
+    images: [
+      "/nakheel-restaurant-cafe-00.webp",
+      "/nakheel-restaurant-cafe-01.webp",
+      "/nakheel-restaurant-cafe-02.webp",
+      "/nakheel-restaurant-cafe-03.webp",
+    ],
+    features: [
+      {
+        title: "Multilingual Support",
         description:
-          "Each business gets a public page with its events, map and footer, and the whole app is available in English and Spanish with light and dark themes.",
+          "Arabic (RTL) and English/French (LTR) support with seamless language switching and RTL/LTR layout transitions across all pages.",
+      },
+      {
+        title: "Modern UI/UX",
+        description:
+          "Responsive, glassmorphism-inspired design with dark mode support and smooth animations powered by Framer Motion.",
+      },
+      {
+        title: "Core Pages",
+        description:
+          "Home, Menu, Gallery, About, Testimonials, Reservation and Contact pages, each tailored to showcase the restaurant.",
+      },
+      {
+        title: "Table Reservation",
+        description:
+          "Booking system that lets customers reserve a table directly from the site.",
+      },
+      {
+        title: "Forms & Validation",
+        description:
+          "React Hook Form with Zod schema validation for reservation and contact forms.",
+      },
+      {
+        title: "Performance & SEO",
+        description:
+          "Fast page loads with Next.js 15, SEO-optimized pages and a mobile-first responsive layout.",
       },
     ],
     stackGroups: [
@@ -628,44 +1038,26 @@ export const projects: Project[] = [
           "Next.js 15 (App Router)",
           "React 19",
           "TypeScript",
-          "Tailwind CSS 4",
-          "shadcn/ui",
+          "Tailwind CSS 3",
         ],
       },
       {
-        category: "Data Management & State",
-        items: [
-          "TanStack React Query",
-          "TanStack Table",
-          "Server Actions",
-          "Zod",
-        ],
-      },
-      {
-        category: "UI & Utilities",
+        category: "UI & Animation",
         items: [
           "Radix UI",
-          "Lucide",
-          "Leaflet / React Leaflet",
-          "React Day Picker",
-          "date-fns",
-          "Sonner",
-          "browser-image-compression",
+          "Framer Motion",
+          "Lucide React",
           "next-themes",
+          "Embla Carousel",
         ],
       },
       {
-        category: "Internationalization",
-        items: ["next-intl (English / Spanish)"],
+        category: "Forms & Validation",
+        items: ["React Hook Form", "Zod", "@hookform/resolvers"],
       },
       {
-        category: "Backend & Database",
-        items: [
-          "Supabase",
-          "PostgreSQL",
-          "Supabase Auth (email and Google)",
-          "Supabase Storage",
-        ],
+        category: "Utilities",
+        items: ["date-fns", "Sonner", "cmdk"],
       },
       {
         category: "Deployment",
@@ -676,52 +1068,42 @@ export const projects: Project[] = [
       {
         layer: "Framework",
         technology: "Next.js 15 + React 19",
-        purpose: "App Router with server components and server actions",
+        purpose: "App Router with server-rendered, multilingual pages",
       },
       {
         layer: "Language",
         technology: "TypeScript",
-        purpose: "Strict typing, with types generated from the Supabase schema",
+        purpose: "Type safety across the application",
       },
       {
         layer: "Styling",
-        technology: "Tailwind CSS 4 + shadcn/ui",
-        purpose: "Accessible components with light and dark themes",
+        technology: "Tailwind CSS 3",
+        purpose: "Utility-first CSS with custom design tokens",
       },
       {
-        layer: "Backend & Database",
-        technology: "Supabase + PostgreSQL",
-        purpose: "Database, authentication, file storage and queries",
+        layer: "Components",
+        technology: "Radix UI",
+        purpose: "Accessible, unstyled UI primitives",
       },
       {
-        layer: "Authentication",
-        technology: "Supabase Auth",
-        purpose: "Email and Google sign-in for organizers and clients",
+        layer: "Animation",
+        technology: "Framer Motion",
+        purpose: "Smooth transitions and RTL/LTR layout switching",
       },
       {
-        layer: "Server State",
-        technology: "TanStack React Query",
-        purpose: "Client-side data fetching and caching",
-      },
-      {
-        layer: "Validation",
-        technology: "Zod",
-        purpose: "Schema validation in server actions and forms",
-      },
-      {
-        layer: "Maps",
-        technology: "Leaflet",
-        purpose: "Event and business location picking and display",
+        layer: "Forms & Validation",
+        technology: "React Hook Form + Zod",
+        purpose: "Reservation and contact forms with schema validation",
       },
       {
         layer: "Internationalization",
-        technology: "next-intl",
-        purpose: "English and Spanish routes and translations",
+        technology: "Custom language provider",
+        purpose: "Arabic RTL and English/French LTR support",
       },
       {
-        layer: "Tables",
-        technology: "TanStack Table",
-        purpose: "Permissions and subscription history tables",
+        layer: "Theme",
+        technology: "next-themes",
+        purpose: "Light and dark mode support",
       },
       {
         layer: "Hosting",
