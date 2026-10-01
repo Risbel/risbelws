@@ -24,7 +24,7 @@ export function Projects() {
     },
   };
 
-  const viewport = { once: true, amount: 0.2, margin: "0px 0px -80px 0px" };
+  const viewport = { once: true, amount: "some" as const, margin: "0px 0px -80px 0px" };
 
   return (
     <Layout className="relative overflow-hidden">

@@ -214,7 +214,7 @@ export const projects: Project[] = [
       {
         title: "Race-Safe Scheduling",
         description:
-          "A partial unique index blocks double-booking at the database level, and the server returns a clean \"slot just got taken\" response.",
+          'A partial unique index blocks double-booking at the database level, and the server returns a clean "slot just got taken" response.',
       },
       {
         title: "Admin Console",
@@ -1104,6 +1104,331 @@ export const projects: Project[] = [
         layer: "Theme",
         technology: "next-themes",
         purpose: "Light and dark mode support",
+      },
+      {
+        layer: "Hosting",
+        technology: "Vercel",
+        purpose: "Production hosting with automatic deployments",
+      },
+    ],
+  },
+  {
+    slug: "nimara-storefront",
+    name: "Nimara Storefront",
+    githubUrl: "https://github.com/mirumee/nimara-storefront",
+    liveUrl: "https://demo.nimara.store/categories/music",
+    description:
+      "Modern, high-performance e-commerce storefront for multi-region, global brands, with swappable commerce, CMS, search and payment integrations.",
+    longDescription:
+      "Nimara is an open-source e-commerce storefront built for multi-region, global brands. It delivers a full commerce experience out of the box, with product catalog, search, cart, checkout and customer accounts, across multiple channels, currencies and languages. Commerce backend, CMS, search and payments each sit behind a typed contract, so providers can be swapped without rewriting the app, and it ships with Saleor as the default backend, Stripe for payments and privacy-first analytics.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "GraphQL",
+      "Saleor",
+      "Stripe",
+    ],
+    image: "/nimara-storefront-00.webp",
+    images: ["/nimara-storefront-00.webp", "/nimara-storefront-01.webp"],
+    features: [
+      {
+        title: "Full Commerce Experience",
+        description:
+          "Product catalog, search, cart, checkout and customer accounts, ready out of the box.",
+      },
+      {
+        title: "Multi-Region & Global Brands",
+        description:
+          "Sell across multiple channels, currencies, languages and markets from a single storefront with localized content and pricing.",
+      },
+      {
+        title: "Privacy-First Analytics",
+        description:
+          "Google Tag Manager and GA4 e-commerce tracking gated by Google Consent Mode v2 with a ready-made cookie consent banner.",
+      },
+      {
+        title: "Swappable Integrations",
+        description:
+          "Commerce backend, CMS, search and payments sit behind typed contracts, with Saleor by default and ButterCMS and Algolia as drop-in alternatives.",
+      },
+      {
+        title: "Secure Payments",
+        description:
+          "Integrated Stripe checkout for reliable, PCI-compliant payment processing, ready to extend to other gateways.",
+      },
+      {
+        title: "Marketplace & AI Commerce",
+        description:
+          "Vendor-aware multi-seller marketplace support and Universal Commerce Protocol (UCP) integration that exposes the catalog and checkout to AI agents.",
+      },
+    ],
+    stackGroups: [
+      {
+        category: "Frontend",
+        items: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "Radix UI",
+        ],
+      },
+      {
+        category: "Data & Forms",
+        items: ["GraphQL", "Zod", "React Hook Form", "next-intl"],
+      },
+      {
+        category: "Integrations",
+        items: ["Saleor", "ButterCMS", "Algolia", "Stripe"],
+      },
+      {
+        category: "Monorepo & Tooling",
+        items: ["Turborepo", "pnpm", "ESLint", "Prettier", "Docusaurus"],
+      },
+      {
+        category: "Testing",
+        items: ["Vitest", "CodeceptJS"],
+      },
+    ],
+    techMatrix: [
+      {
+        layer: "Framework",
+        technology: "Next.js + React",
+        purpose: "Fast, localized storefront with server rendering",
+      },
+      {
+        layer: "Language",
+        technology: "TypeScript",
+        purpose: "Fully typed stack and integration contracts",
+      },
+      {
+        layer: "Styling",
+        technology: "Tailwind CSS + shadcn/ui",
+        purpose: "Utility-first CSS with accessible UI primitives",
+      },
+      {
+        layer: "Commerce Backend",
+        technology: "Saleor (GraphQL)",
+        purpose: "Catalog, checkout, customer accounts and channels",
+      },
+      {
+        layer: "Payments",
+        technology: "Stripe",
+        purpose: "PCI-compliant checkout and payment processing",
+      },
+      {
+        layer: "Internationalization",
+        technology: "next-intl",
+        purpose: "Localized content, languages and pricing",
+      },
+      {
+        layer: "Validation",
+        technology: "Zod + React Hook Form",
+        purpose: "Schema-validated checkout and account forms",
+      },
+      {
+        layer: "Monorepo",
+        technology: "Turborepo + pnpm",
+        purpose: "Storefront and docs apps in a single workspace",
+      },
+      {
+        layer: "Testing",
+        technology: "Vitest + CodeceptJS",
+        purpose: "Unit and end-to-end tests",
+      },
+    ],
+  },
+  {
+    slug: "nexa-shop",
+    name: "Nexa Shop",
+    githubUrl: "https://github.com/antoanMetodiev/Nexa-Shop",
+    liveUrl: "https://nexa-shop.nexa-shop2026.workers.dev",
+    description:
+      "Production-ready bilingual e-commerce platform with Stripe checkout, Supabase backend and a full admin dashboard.",
+    longDescription:
+      "Nexa is a complete e-commerce platform that combines a public bilingual (Bulgarian/English) storefront with an internal admin dashboard, backed by real services rather than mocked data. Shoppers browse, filter and search a product catalog, keep a cart and wishlist synced to their account, and pay through Stripe Checkout, while staff manage products, orders, customers and promo codes from the admin area. It is deployed to Cloudflare Workers.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Stripe",
+      "next-intl",
+      "Motion",
+      "Cloudflare Workers",
+    ],
+    image: "/nexa-shop-00.webp",
+    images: ["/nexa-shop-00.webp"],
+    features: [
+      {
+        title: "Product Catalog & Search",
+        description:
+          "Filtering by category, price, rating and brand, image galleries, related items, live search suggestions and a deals page sorted by discount.",
+      },
+      {
+        title: "Cart & Wishlist",
+        description:
+          "Persistent cart and wishlist synced to user accounts, with dual-currency pricing in EUR and BGN.",
+      },
+      {
+        title: "Bilingual Storefront",
+        description:
+          "Full Bulgarian and English support through locale-prefixed routing.",
+      },
+      {
+        title: "Accounts & Authentication",
+        description:
+          "Email/password and Google OAuth via Supabase, with profile management and avatar uploads.",
+      },
+      {
+        title: "Stripe Payments",
+        description:
+          "Stripe Checkout for guests and signed-in users, with webhook-driven orders recorded only after payment is confirmed and configurable shipping thresholds.",
+      },
+      {
+        title: "Admin Dashboard",
+        description:
+          "Live analytics, product and category CRUD, order management, customer views, promo codes and settings.",
+      },
+    ],
+    stackGroups: [
+      {
+        category: "Frontend",
+        items: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "Motion"],
+      },
+      {
+        category: "Internationalization",
+        items: ["next-intl"],
+      },
+      {
+        category: "Backend & Database",
+        items: [
+          "Supabase",
+          "PostgreSQL",
+          "Supabase Auth",
+          "Supabase Storage",
+          "Row-Level Security",
+        ],
+      },
+      {
+        category: "Payments",
+        items: ["Stripe Checkout", "Stripe Webhooks"],
+      },
+      {
+        category: "Deployment",
+        items: ["Cloudflare Workers", "vinext"],
+      },
+    ],
+    techMatrix: [
+      {
+        layer: "Framework",
+        technology: "Next.js (App Router)",
+        purpose: "Storefront and admin dashboard pages with API routes",
+      },
+      {
+        layer: "Language",
+        technology: "TypeScript",
+        purpose: "Type safety across the platform",
+      },
+      {
+        layer: "Styling",
+        technology: "Tailwind CSS",
+        purpose: "Utility-first, responsive layouts",
+      },
+      {
+        layer: "Animation",
+        technology: "Motion",
+        purpose: "Smooth animations and page transitions",
+      },
+      {
+        layer: "Internationalization",
+        technology: "next-intl",
+        purpose: "Bulgarian and English with locale-prefixed routes",
+      },
+      {
+        layer: "Backend & Database",
+        technology: "Supabase + PostgreSQL",
+        purpose: "Auth, data, file storage and Row-Level Security",
+      },
+      {
+        layer: "Payments",
+        technology: "Stripe",
+        purpose: "Checkout sessions and webhook-driven order recording",
+      },
+      {
+        layer: "Hosting",
+        technology: "Cloudflare Workers (vinext)",
+        purpose: "Edge deployment of the Next.js app",
+      },
+    ],
+  },
+  {
+    slug: "abule-maintenance",
+    name: "Abule Maintenance",
+    githubUrl: "https://github.com/justabrish707-svg/Abule-maintenance",
+    liveUrl: "https://abule-maintenance.vercel.app",
+    description:
+      "Responsive website for booking home and property maintenance services, with service listings and contact forms.",
+    longDescription:
+      "Abule Maintenance is a modern, responsive website for a home and property maintenance business. Visitors browse the available services and request professional help through booking and contact forms, in a clean interface that is easy to use on any device.",
+    stack: ["React", "TypeScript", "Vite", "Vercel"],
+    image: "/abule-maintenance-00.webp",
+    images: ["/abule-maintenance-00.webp", "/abule-maintenance-01.webp", "/abule-maintenance-02.webp"],
+    features: [
+      {
+        title: "Service Listings",
+        description:
+          "Clear overview of the home and property maintenance services offered.",
+      },
+      {
+        title: "Service Booking",
+        description:
+          "Easy-to-use interface for customers to request professional maintenance assistance.",
+      },
+      {
+        title: "Contact Forms",
+        description:
+          "Forms that let visitors get in touch with the business directly.",
+      },
+      {
+        title: "Responsive Design",
+        description:
+          "Clean layout that adapts to mobile, tablet and desktop screens.",
+      },
+    ],
+    stackGroups: [
+      {
+        category: "Frontend",
+        items: ["React", "TypeScript", "Vite"],
+      },
+      {
+        category: "Development Tools",
+        items: ["Oxlint"],
+      },
+      {
+        category: "Deployment",
+        items: ["Vercel"],
+      },
+    ],
+    techMatrix: [
+      {
+        layer: "Bundler",
+        technology: "Vite",
+        purpose: "Fast dev server and optimized production builds",
+      },
+      {
+        layer: "Framework",
+        technology: "React + TypeScript",
+        purpose: "Component-based UI with type safety",
+      },
+      {
+        layer: "Linting",
+        technology: "Oxlint",
+        purpose: "Fast code quality checks",
       },
       {
         layer: "Hosting",
