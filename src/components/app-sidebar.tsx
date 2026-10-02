@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sidebar";
 import { useSidebar } from "@/components/ui/use-sidebar";
 import { menuItems } from "@/components/menu-items";
+import { Logo } from "@/components/logo";
 
 export function AppSidebar() {
   const { setOpenMobile } = useSidebar();
@@ -22,7 +23,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader>
         <div className="flex items-center gap-2 py-3">
-          <img height={28} width={28} src="/favicon.svg"></img>
+          <Logo className="size-7" />
           <p className="font-semibold">RisbelWS</p>
         </div>
       </SidebarHeader>

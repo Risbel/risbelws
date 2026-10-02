@@ -1,5 +1,6 @@
 import { Spotlight } from "@/components/ui/spotlight";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 import { ArrowRightIcon, FileStackIcon } from "lucide-react";
 import { useNavigate } from "react-router";
 import { motion, useReducedMotion, type Variants } from "motion/react";
@@ -27,20 +28,16 @@ export function Home() {
 
   return (
     <div className="relative flex h-full items-center justify-center overflow-hidden">
-      <Spotlight duration={1} className="top-30 left-30 hidden lg:left-150 dark:block" fill="white" />
+      <Spotlight duration={1.5} className="top-20 left-30 hidden lg:left-150 dark:block" fill="white" />
       <motion.div
         variants={shouldReduceMotion ? undefined : containerVariants}
         initial="hidden"
         animate="visible"
         className="flex-1 flex flex-col items-center justify-center relative z-10 mx-auto w-fit max-w-7xl px-4"
       >
-        <motion.img
-          variants={shouldReduceMotion ? undefined : itemVariants}
-          height={72}
-          width={72}
-          src="/favicon.svg"
-          alt="favicon"
-        />
+        <motion.div variants={shouldReduceMotion ? undefined : itemVariants}>
+          <Logo className="size-18 pb-2" />
+        </motion.div>
         <motion.h1
           variants={shouldReduceMotion ? undefined : itemVariants}
           className="max-w-sm lg:max-w-4xl bg-opacity-50 text-center font-extrabold text-foreground text-2xl lg:text-5xl dark:bg-linear-to-b dark:from-neutral-50 dark:to-neutral-400 dark:bg-clip-text dark:text-transparent"

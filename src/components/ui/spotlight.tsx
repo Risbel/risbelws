@@ -10,7 +10,7 @@ export const Spotlight = ({ className, fill, duration }: SpotlightProps) => {
   return (
     <svg
       className={cn(
-        "animate-spotlight pointer-events-none absolute z-1 h-full w-[158%] lg:w-[64%] opacity-0",
+        "animate-spotlight pointer-events-none absolute z-1 h-full w-[170%] lg:w-[120%] opacity-0",
         className,
       )}
       style={duration ? { animationDuration: `${duration}s` } : undefined}

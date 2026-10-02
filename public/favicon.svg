@@ -1,9 +1,8 @@
-<svg width="384" height="374" viewBox="0 0 384 374" xmlns="http://www.w3.org/2000/svg">
-  <defs><filter id="sm-fx-merged" x="-50%" y="-50%" width="200%" height="200%"><feMorphology in="SourceAlpha" operator="dilate" radius="27" result="smDilated" /><feFlood flood-color="#0d0716" result="smStrokeColor" /><feComposite in="smStrokeColor" in2="smDilated" operator="in" result="smOutline" /><feMerge><feMergeNode in="smOutline" /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs>
-  <g fill="#ffffff" fill-opacity="1" filter="url(#sm-fx-merged)">
-      <path d="M 98 147 L 226 147 A 11 11 0 0 1 237 158 L 237 276 A 11 11 0 0 1 226 287 L 98 287 A 11 11 0 0 1 87 276 L 87 158 A 11 11 0 0 1 98 147 Z" />
-      <path d="M 128 117 L 256 117 A 11 11 0 0 1 267 128 L 267 246 A 11 11 0 0 1 256 257 L 128 257 A 11 11 0 0 1 117 246 L 117 128 A 11 11 0 0 1 128 117 Z" />
-      <path d="M 158 87 L 286 87 A 11 11 0 0 1 297 98 L 297 216 A 11 11 0 0 1 286 227 L 158 227 A 11 11 0 0 1 147 216 L 147 98 A 11 11 0 0 1 158 87 Z" />
-      
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <rect width="24" height="24" rx="5" fill="#0d0716" />
+  <g fill="#ffffff">
+    <rect fill-opacity="0.35" height="12" rx="1.5" width="12" x="3" y="8" />
+    <rect fill-opacity="0.65" height="12" rx="1.5" width="12" x="6" y="6" />
+    <rect height="12" rx="1.5" width="12" x="9" y="4" />
   </g>
 </svg>
